@@ -40,7 +40,7 @@ const devToolKey = ((process.platform === 'darwin') ?
 // global window references prevent them from being garbage-collected
 const _windows = {};
 
-// enable connecting to Scratch Link even if we DNS / Internet access is not available
+// enable connecting to KidsProgram Link even if we DNS / Internet access is not available
 // this must happen BEFORE the app ready event!
 app.commandLine.appendSwitch('host-resolver-rules', 'MAP device-manager.scratch.mit.edu 127.0.0.1');
 
@@ -51,12 +51,12 @@ const displayPermissionDeniedWarning = (browserWindow, permissionType) => {
     case 'camera':
         title = 'Camera Permission Denied';
         message = 'Permission to use the camera has been denied. ' +
-            'Scratch will not be able to take a photo or use video sensing blocks.';
+            'KidsProgram will not be able to take a photo or use video sensing blocks.';
         break;
     case 'microphone':
         title = 'Microphone Permission Denied';
         message = 'Permission to use the microphone has been denied. ' +
-            'Scratch will not be able to record sounds or detect loudness.';
+            'KidsProgram will not be able to record sounds or detect loudness.';
         break;
     default: // shouldn't ever happen...
         title = 'Permission Denied';
@@ -66,10 +66,10 @@ const displayPermissionDeniedWarning = (browserWindow, permissionType) => {
     let instructions;
     switch (process.platform) {
     case 'darwin':
-        instructions = 'To change Scratch permissions, please check "Security & Privacy" in System Preferences.';
+        instructions = 'To change KidsProgram permissions, please check "Security & Privacy" in System Preferences.';
         break;
     default:
-        instructions = 'To change Scratch permissions, please check your system settings and restart Scratch.';
+        instructions = 'To change KidsProgram permissions, please check your system settings and restart KidsProgram.';
         break;
     }
     message = `${message}\n\n${instructions}`;
@@ -222,7 +222,7 @@ const createMainWindow = () => {
     const window = createWindow({
         width: defaultSize.width,
         height: defaultSize.height,
-        title: `${productName} ${version}` // something like "Scratch 3.14"
+        title: `${productName} ${version}` // something like "KidsProgram 3.14"
     });
     const webContents = window.webContents;
 
@@ -232,7 +232,7 @@ const createMainWindow = () => {
         const baseName = path.basename(itemPath);
         const extName = path.extname(baseName);
         const options = {
-            defaultPath: baseName
+            defaultPath: "KidsProgram"
         };
         if (extName) {
             const extNameNoDot = extName.replace(/^\./, '');
@@ -293,7 +293,7 @@ const createMainWindow = () => {
     webContents.on('will-prevent-unload', ev => {
         const choice = dialog.showMessageBoxSync(window, {
             type: 'question',
-            message: 'Leave Scratch?',
+            message: 'Leave KidsProgram?',
             detail: 'Any unsaved changes will be lost.',
             buttons: ['Stay', 'Leave'],
             cancelId: 0, // closing the dialog means "stay"

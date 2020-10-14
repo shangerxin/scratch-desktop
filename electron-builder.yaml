@@ -1,8 +1,8 @@
 directories:
   buildResources: buildResources
   output: dist
-appId: edu.mit.scratch.scratch-desktop
-productName: "Scratch 3"
+appId: edu.mit.kidsprogram.kidsprogram-desktop
+productName: "少儿编程 1.0"
 publish: # empty provider list = don't publish
 mac:
   category: public.app-category.education
@@ -16,12 +16,12 @@ mac:
   hardenedRuntime: true
   icon: buildResources/ScratchDesktop.icns
   provisioningProfile: embedded.provisionprofile
-  artifactName: "Scratch ${version}.${ext}"
+  artifactName: "KidsProgram ${version}.${ext}"
   target:
     - dmg
     - mas
 dmg:
-  title: "Scratch ${version}"
+  title: "KidsProgram ${version}"
 mas:
   category: public.app-category.education
   entitlements: buildResources/entitlements.mas.plist
@@ -37,10 +37,10 @@ win:
     - appx
     - nsis
 appx:
-  identityName: ScratchFoundation.ScratchDesktop
-  publisherDisplayName: "Scratch Foundation"
+  identityName: KidsProgramFoundation.ScratchDesktop
+  publisherDisplayName: "KidsProgram Foundation"
   publisher: "CN=2EC43DF1-469A-4119-9AB9-568A0A1FF65F"
-  artifactName: "Scratch ${version}.${ext}"
+  artifactName: "KidsProgram ${version}.${ext}"
 nsis:
   oneClick: false # allow user to choose per-user or per-machine
-  artifactName: "Scratch ${version} Setup.${ext}"
+  artifactName: "KidsProgram ${version} Setup.${ext}"

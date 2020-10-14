@@ -1,9 +1,9 @@
 {
   "name": "scratch-desktop",
-  "productName": "Scratch",
-  "description": "Scratch 3.0 as a self-contained desktop application",
+  "productName": "KidsProgram",
+  "description": "KidsProgram 1.0.0 as a self-contained desktop application",
   "author": "Scratch Foundation",
-  "version": "3.17.0",
+  "version": "1.0.0",
   "license": "BSD-3-Clause",
   "scripts": {
     "clean": "rimraf ./dist ./static/assets",

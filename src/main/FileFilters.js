@@ -12,23 +12,23 @@ const saveFilters = {
         extensions: ['png']
     },
     SB: {
-        name: 'Scratch 1 Project',
+        name: 'KidsProgram 1 Project',
         extensions: ['sb']
     },
     SB2: {
-        name: 'Scratch 2 Project',
+        name: 'KidsProgram 2 Project',
         extensions: ['sb2']
     },
     SB3: {
-        name: 'Scratch 3 Project',
+        name: 'KidsProgram 3 Project',
         extensions: ['sb3']
     },
     Sprite2: {
-        name: 'Scratch 2 Sprite',
+        name: 'KidsProgram 2 Sprite',
         extensions: ['sprite2']
     },
     Sprite3: {
-        name: 'Scratch 3 Sprite',
+        name: 'KidsProgram 3 Sprite',
         extensions: ['sprite3']
     },
     SVG: {
@@ -59,7 +59,7 @@ const loadFilters = {
         ]
     },
     AllProjects: {
-        name: 'All Scratch Projects',
+        name: 'All KidsProgram Projects',
         extensions: [
             ...saveFilters.SB3.extensions,
             ...saveFilters.SB2.extensions,
